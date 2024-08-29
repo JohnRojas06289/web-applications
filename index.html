@@ -13,20 +13,40 @@
     <h1>Ejemplos de APIs del Navegador</h1>
 
     <div class="container">
-        <p>Las APIs del navegador son interfaces que permiten a los desarrolladores interactuar con las características
-            y funcionalidades del navegador web. En JavaScript, hay una gran variedad de APIs del navegador disponibles,
-            desde la manipulación del DOM hasta el almacenamiento de datos y la geolocalización.</p>
+        <h2>¿Qué son las APIs del Navegador?</h2>
+        <p>Las APIs del navegador son conjuntos de funcionalidades predefinidas que los desarrolladores pueden utilizar para interactuar con diferentes características del navegador web. Las APIs permiten acceder y manipular elementos del DOM, gestionar almacenamiento local, interactuar con multimedia, y mucho más. Todo esto se realiza a través de JavaScript.</p>
+        <p>En este documento, vamos a explorar algunas de las APIs más comunes y útiles disponibles en los navegadores modernos, así como ofrecer ejemplos interactivos que puedes probar por ti mismo.</p>
+    </div>
+
+    <div class="container">
+        <h2>¿Cómo funcionan las APIs del Navegador?</h2>
+        <p>Las APIs del navegador funcionan como un puente entre el código JavaScript de la página web y las capacidades subyacentes del navegador. Proveen métodos y propiedades que permiten interactuar con el sistema, el hardware del usuario (como la cámara o el micrófono), y otras características del navegador, de una manera segura y controlada.</p>
+        <p>Por ejemplo, la API de manipulación del DOM permite a los desarrolladores cambiar el contenido de una página, la API de <code>localStorage</code> permite almacenar datos en el navegador, y la API de <code>Geolocation</code> permite acceder a la ubicación del usuario (con su permiso).</p>
+    </div>
+
+    <div class="container">
+        <h2>Instrucciones de Uso</h2>
+        <p>A continuación, se presentan ejemplos interactivos que demuestran cómo utilizar diversas APIs del navegador. Cada sección proporciona un ejemplo práctico:</p>
+        <ul>
+            <li><strong>Manipulación del DOM:</strong> Selecciona elementos en la página y cambia sus estilos o clases.</li>
+            <li><strong>Almacenamiento con localStorage:</strong> Guarda y recupera datos del almacenamiento local del navegador.</li>
+            <li><strong>Trabajar con Multimedia:</strong> Controla la reproducción de audio y video.</li>
+            <li><strong>Interacción con el Usuario:</strong> Maneja eventos de usuario como clics y arrastres.</li>
+        </ul>
+        <p>Para interactuar con los ejemplos, sigue las instrucciones que aparecen en cada sección y utiliza los botones y campos de entrada proporcionados. Los resultados se mostrarán dinámicamente en la página.</p>
     </div>
 
     <!-- Ejemplo 1: Manipulación del DOM -->
     <div class="container" id="contenedor">
+
+
         <h2>1. Manipulación del DOM</h2>
         <p>Las APIs para manipulación del DOM permiten a los desarrolladores modificar el contenido y el estilo de una
             página web. Algunas de las APIs más comunes para manipulación del DOM son:</p>
         <ul>
             <li>
                 <strong>Document.querySelector(selector):</strong> Selecciona el primer elemento que coincide con el
-                selector CSS especificado.
+                selector de CSS especificado.
                 <div class="example">
                     <input type="text" id="selectorInput" placeholder="Ingresa un selector CSS...">
                     <button id="querySelectorBtn">Seleccionar elemento</button>
@@ -46,7 +66,7 @@
                 <strong>HTMLElement.style:</strong> Permite establecer estilos en línea directamente en un elemento.
                 <div class="example">
                     <button id="styleBtn">Cambiar color del texto</button>
-                    <p id="styleOutput">Este texto cambiará de color.</p>
+                    <p id="styleOutput">Este texto cambiará de color al hacer clic en el boton de arriba.</p>
                 </div>
             </li>
             <li>
@@ -149,9 +169,9 @@
     <div class="container">
         <h2>Referencias</h2>
         <ol>
-            <li>https://developer.mozilla.org/es/docs/Web/API</li>
-            <li>https://desarrolladoresweb.org/javascript/apis-del-navegador/</li>
-            <li>https://developer.mozilla.org/es/docs/Learn/JavaScript/Client-side_web_APIs/Introduction</li>
+            <li><a href="https://developer.mozilla.org/es/docs/Web/API" target="_blank">Documentación oficial de Mozilla sobre APIs del navegador</a></li>
+            <li><a href="https://desarrolladoresweb.org/javascript/apis-del-navegador/" target="_blank">Guía sobre APIs del navegador en desarrolladoresweb.org</a></li>
+            <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Client-side_web_APIs/Introduction" target="_blank">Introducción a APIs del lado del cliente en JavaScript</a></li>
         </ol>
     </div>
 
