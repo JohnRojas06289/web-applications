@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de APIs del Navegador</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <h1>Ejemplos de APIs del Navegador</h1>
+
+    <div class="container">
+        <p>Las APIs del navegador son interfaces que permiten a los desarrolladores interactuar con las características
+            y funcionalidades del navegador web. En JavaScript, hay una gran variedad de APIs del navegador disponibles,
+            desde la manipulación del DOM hasta el almacenamiento de datos y la geolocalización.</p>
+    </div>
+
+    <!-- Ejemplo 1: Manipulación del DOM -->
+    <div class="container" id="contenedor">
+        <h2>1. Manipulación del DOM</h2>
+        <p>Las APIs para manipulación del DOM permiten a los desarrolladores modificar el contenido y el estilo de una
+            página web. Algunas de las APIs más comunes para manipulación del DOM son:</p>
+        <ul>
+            <li>
+                <strong>Document.querySelector(selector):</strong> Selecciona el primer elemento que coincide con el
+                selector CSS especificado.
+                <div class="example">
+                    <input type="text" id="selectorInput" placeholder="Ingresa un selector CSS...">
+                    <button id="querySelectorBtn">Seleccionar elemento</button>
+                    <p id="querySelectorOutput">El resultado aparecerá aquí...</p>
+                </div>
+            </li>
+            <li>
+                <strong>Document.querySelectorAll(selector):</strong> Devuelve una lista de todos los elementos que
+                coinciden con el selector CSS.
+                <div class="example">
+                    <input type="text" id="selectorAllInput" placeholder="Ingresa un selector CSS...">
+                    <button id="querySelectorAllBtn">Seleccionar elementos</button>
+                    <ul id="querySelectorAllOutput"></ul>
+                </div>
+            </li>
+            <li>
+                <strong>HTMLElement.style:</strong> Permite establecer estilos en línea directamente en un elemento.
+                <div class="example">
+                    <button id="styleBtn">Cambiar color del texto</button>
+                    <p id="styleOutput">Este texto cambiará de color.</p>
+                </div>
+            </li>
+            <li>
+                <strong>Element.classList:</strong> Proporciona métodos para agregar, eliminar y verificar clases en un
+                elemento.
+                <div class="example">
+                    <button id="classListBtn">Agregar clase "destacado"</button>
+                    <p id="classListOutput">Este texto se destacará con una clase.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Ejemplo 2: Almacenamiento local -->
+    <div class="container">
+        <h2>2. Almacenamiento con localStorage</h2>
+        <p>Las APIs para almacenamiento permiten a los desarrolladores almacenar datos en el navegador del usuario. Las
+            APIs más comunes para almacenamiento son «localStorage», «sessionStorage» e «IndexedDB».</p>
+        <p>Ingresa un nombre para guardarlo en el localStorage y presiona el botón para verlo:</p>
+        <input type="text" id="nombreInput" placeholder="Ingresa tu nombre...">
+        <button id="guardarNombre">Guardar Nombre</button>
+        <p class="output">Nombre guardado: <span id="nombreGuardado"></span></p>
+    </div>
+
+    <!-- Ejemplo 3: Trabajar con multimedia -->
+    <div class="container">
+        <h2>3. Trabajar con multimedia</h2>
+        <p>Las APIs para trabajar con multimedia permiten a los desarrolladores agregar audio y video a sus páginas web.
+            Algunas de las APIs más comunes para trabajar con multimedia son «HTMLMediaElement», «HTMLAudioElement» y
+            «HTMLVideoElement».</p>
+        <p>Haz clic en el botón para reproducir un archivo de audio:</p>
+        <div class="multimedia-container">
+            <button id="playAudio">Reproducir Audio</button>
+        </div>
+    
+        <h3>Control de Volumen</h3>
+        <p>Usa el siguiente control para ajustar el volumen del audio:</p>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+        <label for="volumeControl">Volumen</label>
+    
+        <h3>Reproducción de Video</h3>
+        <p>Haz clic en el botón para reproducir un video:</p>
+        <video id="videoPlayer" width="320" height="240" controls>
+            <source src="./assets/video/brasileño.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+
+    <!-- Ejemplo 4: Interacción con el usuario -->
+    <div class="container">
+        <h2>4. Interacción con el usuario</h2>
+        <p>Las APIs para interacción con el usuario permiten a los desarrolladores crear interfaces de usuario
+            interactivas y personalizadas. Algunas de las APIs más comunes para interacción con el usuario son
+            «addEventListener», «drag and drop».</p>
+        <p>Haz clic en el botón para interactuar con la consola:</p>
+        <button id="boton">Presionar</button>
+
+        <h3>Interacción con Elementos Arrastrables</h3>
+        <p>Arrastra el cuadro a la caja de destino:</p>
+        <div id="dragSource" draggable="true" class="drag-item">Arrástrame</div>
+        <div id="dropTarget" class="drop-zone">Suelta aquí</div>
+    </div>
+
+    <!-- Ejemplo 5: Manipulación del DOM con elementos múltiples -->
+    <div class="container">
+        <h2>5. Manipulación del DOM con elementos múltiples</h2>
+        <p>Las siguientes secciones demuestran cómo manipular múltiples elementos a la vez:</p>
+        <p>Escribe el texto de los ítems y presiona el botón para añadirlos a la lista:</p>
+        <input type="text" id="itemInput" placeholder="Añadir un ítem...">
+        <button id="agregarItem">Agregar Ítem</button>
+        <ul id="itemList" class="output"></ul>
+
+        <h3>Cambiar Estilos de Múltiples Elementos</h3>
+        <p>Haz clic en el botón para cambiar el color de todos los ítems de la lista:</p>
+        <button id="cambiarEstilos">Cambiar Estilos</button>
+    </div>
+
+    <!-- Casos de uso -->
+    <div class="container">
+        <h2>Ejemplos y casos de uso</h2>
+        <p>Algunos ejemplos y casos de uso de las APIs del navegador en JavaScript incluyen:</p>
+        <ul>
+            <li><strong>Document.querySelector:</strong> Seleccionar un elemento para cambiar su contenido o estilo.
+            </li>
+            <li><strong>Document.querySelectorAll:</strong> Seleccionar múltiples elementos para aplicarles una
+                operación de manera conjunta.</li>
+            <li><strong>HTMLElement.style:</strong> Cambiar dinámicamente los estilos CSS de un elemento específico.
+            </li>
+            <li><strong>Element.classList:</strong> Manipular las clases CSS para añadir o eliminar estilos
+                predefinidos.</li>
+            <li><strong>localStorage:</strong> Guardar preferencias de usuario, como el tema oscuro o claro, para
+                persistir entre sesiones.</li>
+            <li><strong>HTMLMediaElement:</strong> Controlar la reproducción de audio y video, ajustar el volumen y
+                manipular otros parámetros multimedia.</li>
+            <li><strong>addEventListener:</strong> Manejar eventos de usuario como clics y arrastres para mejorar la
+                interactividad.</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Referencias</h2>
+        <ol>
+            <li>https://developer.mozilla.org/es/docs/Web/API</li>
+            <li>https://desarrolladoresweb.org/javascript/apis-del-navegador/</li>
+            <li>https://developer.mozilla.org/es/docs/Learn/JavaScript/Client-side_web_APIs/Introduction</li>
+        </ol>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
